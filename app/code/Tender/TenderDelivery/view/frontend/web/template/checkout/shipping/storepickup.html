@@ -1,0 +1,30 @@
+<div class="fieldset">
+	<div data-bind="visible: selectedMethod() == 'tenderschedule_tenderschedule'"  class="storepickup-shipping-method" id="storepickup-shipping-method">
+		<div class="cls-storepickup-container cls-desktop">
+            <div class="storepickup-shipping-data" id="storepickup-shipping-data">
+                <input type="hidden" value="0" class="storepickup_checked" name="storepickup_shipping_checked" id="storepickup_checked">
+                
+            </div>		
+            <input data-bind="datetimepicker: true" type="text" class="input-text required-entry" id="calendar_inputField" name="calendar_inputField" aria-required="true" placeholder="Select Data And Time">
+		</div>
+        <div class="cls-storepickup-container cls-mobile">
+            <div class="cls-calender-cntr">
+                <div id="mobile_delivery_calender" data-bind="tenderCalendarPicker: true" ></div>
+                <input type="hidden" class="input-text required-entry" id="mobile_delivery_date" name="mobile_delivery_date" aria-required="true" placeholder="Select Data And Time">
+            </div>
+            <div class="cls-times-cntr">
+                <label for="mobile_delivery_time">Time</label>
+                <select required data-validate="{required:true}" data-bind="attr: {
+                    name: 'mobile_delivery_time',
+                    id: 'mobile_delivery_time'
+                },options: deliveryTimeInterval,
+                        optionsCaption: 'Choose one...',
+                        optionsText: 'label',
+                        optionsValue: 'value',
+                        valueAllowUnset: true" >
+                </select>
+            </div>
+		</div>
+	</div> 
+</div>
+<div style="clear: both;"></div>

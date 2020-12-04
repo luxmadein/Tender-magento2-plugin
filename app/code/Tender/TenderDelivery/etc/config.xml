@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        
+        
+        <tenderdelivery>
+            <general>
+                <mode>production</mode>
+            </general>
+            
+            <pickup_point>
+                <country_id>IT</country_id>
+                <region_id>739</region_id>
+            </pickup_point>
+            
+        </tenderdelivery>
+        
+        
+        <carriers>
+            
+            <tenderinstant>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Tender\TenderDelivery\Model\Carrier\InstantDelivery</model>
+                <name>Instant Delivery</name>
+                <price>0</price>
+                <title>Tender Delivery</title>
+                <type>I</type>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+                <sort_order>450</sort_order>
+            </tenderinstant>
+            
+            <tenderschedule>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Tender\TenderDelivery\Model\Carrier\ScheduleDelivery</model>
+                <name>Schedule Delivery</name>
+                <price>0</price>
+                <title>Tender Delivery</title>
+                <type>I</type>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+                <sort_order>500</sort_order>
+            </tenderschedule>
+            
+        </carriers>
+        
+    </default>
+</config>
